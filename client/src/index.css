@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.footer{
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    margin-top: auto;
+ }
+ .widthCard{
+    transition-duration: .3s;
+    width: 17rem !important;
+    margin: 0 !important;
+ }
+ .table_a1{
+    margin: 50px auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.table_a1 th,
+.table_a1 td {
+    padding: 10px;
+    border: 1px solid black;
+}
+.table_a1 th {
+    background-color: #f2f2f2;
+}
