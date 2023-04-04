@@ -43,11 +43,11 @@ export const Header = (props) => {
                                 <Navbar.Collapse id="basic-navbar-nav" >
                                     <Nav className="ml-auto">
                                     <NavLink className="nav-link" to={"/"}>Главная</NavLink>
-                                    {!state.authenticated?<NavLink className="nav-link" to={"/Courses"}>Курсы</NavLink>:""}
-                                    
+                                    {!state.authenticated?<NavLink className="nav-link" to={"/Courses"}>Фразы</NavLink>:""}
+                                    {!state.authenticated?<NavLink className="nav-link" to={"/Media"}>Медиатека</NavLink>:""}
                                     <NavLink className="nav-link" to={"/grammar"}>Грамматика</NavLink>
                                     {state.authenticated?<NavLink className="nav-link" to={"/AuthPage"}>Вход</NavLink>:<NavLink className="nav-link" to={"/AuthPage"} onClick={(e)=>logoutHandler(e)}>Выйти</NavLink>}
-                                    
+                        
                                     </Nav>
                                     
                                 </Navbar.Collapse>

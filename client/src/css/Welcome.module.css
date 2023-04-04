@@ -2,7 +2,7 @@
     line-height: .95;
     color: #66fcf1;
     font-weight: 900;
-    font-size: 150px;
+    font-size: 140px;
     text-transform: uppercase;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -50,4 +50,21 @@
   .btn:hover {
     background: #66fcf1;
     color: #10151B;
+  }
+
+  @media (max-width: 992px){
+    .title{
+      font-weight: 400;
+      font-size: 70px;
+
+    }
+  
+  }
+  @media (max-width: 600px){
+    .title{
+      font-weight: 900;
+      font-size: 40px;
+
+    }
+  
   }

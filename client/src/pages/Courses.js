@@ -22,7 +22,7 @@ export const Courses = () => {
       <h1 className="mt-5 mb-5 text-center">Общие курсы</h1>
       <div className="container " style={{minHeight:"60vh"}}>
         <div className="row mt-5 mb-5 align-itemes-center justify-content-center" >
-          <Link to="/Courses//Courses_A1"
+          <Link to="/Courses/Courses_A1"
             className={cards[0].class}
             style={{ width: "14rem",height:"230px" , margin: "20px" }}
             onMouseOver={() => handleCardHover(0, true)}

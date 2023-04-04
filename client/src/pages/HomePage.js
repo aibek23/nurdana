@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 // import {Link} from "react-router-dom"
 import { FaArrowDown } from "react-icons/fa";
 import { FcAcceptDatabase } from "react-icons/fc";
@@ -13,14 +13,25 @@ import { Link } from "react-router-dom";
 
 import style from "../css/HomePage.module.css"
 export const HomePage = () =>{
+
+  const [cards, setCards] = useState([    { class: "card", hovered: false },    { class: "card", hovered: false },    { class: "card", hovered: false },    { class: "card", hovered: false },  ]);
+
+  const handleCardHover = (index, hovered) => {
+    setCards((prevState) => {
+      const newState = [...prevState];
+      newState[index].class = hovered ? "card shadow-lg widthCard" : "card";
+      newState[index].hovered = hovered;
+      return newState;
+    });
+  };
       return (<>
         <div className={style.contain}>
         <div className={style.rows}>
           <h1 className={style.title}>Добро пожаловать на сайт "DEUTSCH MIT UNS"!</h1>
           <p className={style.title_caunt}>
-            Здесь вы можете бесплатно изучать немецкий язык до уровня A1.
+            Здесь вы можете бесплатно изучать немецкий язык.
           </p >
-          <p className={style.title_caunt}>Для продолжения обучения на более высоких уровнях необходимо зарегистрироваться.</p>
+          {/* <p className={style.title_caunt}>Для продолжения обучения на более высоких уровнях необходимо зарегистрироваться.</p> */}
         </div>
       </div>
     <div className="container p-5 d-flex justify-content-center  bg-white flex-column align-content-center text-center" >
@@ -29,15 +40,57 @@ export const HomePage = () =>{
     </div>
 
     <div className="container">
-    <div className="row">
-            <div className="col-md-4 p-0 pb-3 text-white "   >
-            <div className="p-5 m-2 h-100" style={{"backgroundColor":"#A56068", "maxHeight":"560px"}}>
-                <p className="text-center"><FcAcceptDatabase style={{"color":"#C67719", "fontSize":"150px"}}/></p>
-                <h3 className="text-center">Курсы</h3>
-                <p >Четыре комплексных языковых курса на уровнях A1, A2, с интерактивными упражнениями и аудиовизуальными учебными материалами.</p>
-                </div>
+    <div className="row mt-5 mb-5 align-itemes-center justify-content-center" style={{minHeight:"60vh"}}>
+        
+            <Link to="/Courses_A1"
+            className={cards[0].class}
+            style={{ width: "19rem",height:"370px" , margin: "25px","backgroundColor":"#A56068","textDecoration":"none" }}
+            onMouseOver={() => handleCardHover(0, true)}
+            onMouseOut={() => handleCardHover(0, false)}
+          >
+            <p className="card-img-top"  ><FcAcceptDatabase style={{"color":"#C67719", "fontSize":"150px"}}/></p>
+            <div className="card-body">
+            <h3 className="text-center">Фразы</h3>
+                <p style={{color:"white"}}>Фразы для повседневного общения, которые используются в разговорной речи для общения в повседневной жизни.                      </p>
+
             </div>
-            <div className="col-md-4 p-0 pb-3 text-white " ><div className="p-5 m-2 h-100" style={{"backgroundColor":"#E9B353","maxHeight":"560px"}}>
+          </Link>
+          <Link
+            to="/grammar"
+            className={cards[2].class}
+            style={{ width: "19rem",height:"370px" , margin: "25px","backgroundColor":"#E9B353" ,"textDecoration":"none" }}
+            onMouseOver={() => handleCardHover(2, true)}
+            onMouseOut={() => handleCardHover(2, false)}
+          >
+            <p className="card-img-top"  ><FcAlphabeticalSortingZa style={{"color":"#C67719", "fontSize":"150px"}}/></p>
+            <div className="card-body">
+            <h3 className="text-center">Грамматика</h3>
+                <p style={{color:"white"}}>Важнейшие правила с примерами правильного использования немецкой грамматики.                      </p>
+            </div>
+          </Link>
+          <Link
+           to="/Media"
+            className={cards[3].class}
+            style={{ width: "19rem" ,height:"370px", margin: "25px","backgroundColor":"#3A9389"  ,"textDecoration":"none" }}
+            onMouseOver={() => handleCardHover(3, true)}
+            onMouseOut={() => handleCardHover(3, false)}
+          >
+            <p className="card-img-top"  ><FcCamcorderPro style={{"color":"#C67719", "fontSize":"150px"}}/></p>
+            <div className="card-body">
+            <h3 className="text-center">Медиатека</h3>
+                <p style={{color:"white"}}>Мультимедийное содержание: многочисленные подлинные тексты, а также аудио- и видеоматериалы на немецком языке.</p>
+            </div>
+          </Link>
+          <div className="col-md-4 p-0 pb-3 text-white "    >
+            {/* <div to="/Courses_A1" className="p-5 m-2 h-100" style={{"backgroundColor":"#A56068", "maxHeight":"560px"}}>
+                <p className="text-center"><FcAcceptDatabase style={{"color":"#C67719", "fontSize":"150px"}}/></p>
+                <h3 className="text-center">фразы</h3>
+                <Link to="/Courses_A1" className="text-center">
+                <p >Добро пожаловать</p>
+                </Link>
+                </div> */}
+            </div>
+            {/* <div className="col-md-4 p-0 pb-3 text-white " ><div className="p-5 m-2 h-100" style={{"backgroundColor":"#E9B353","maxHeight":"560px"}}>
                 <p className="text-center"><FcAlphabeticalSortingZa style={{"color":"#C67719", "fontSize":"150px"}}/></p>
                 <h3 className="text-center">Грамматика</h3>
                 <p >Важнейшие правила с примерами правильного использования немецкой грамматики.                      </p>
@@ -49,29 +102,7 @@ export const HomePage = () =>{
                 <h3 className="text-center">Медиатека</h3>
                 <p >Мультимедийное содержание: многочисленные подлинные тексты, а также аудио- и видеоматериалы на немецком языке.</p>
                 </div>
-            </div>
-            <div className="col-md-4 p-0 pb-3 text-white"   >
-            <div className="p-5 m-2 h-100" style={{"backgroundColor":"#DD7486"}}>
-                <p className="text-center"><FcBriefcase style={{"color":"#C67719", "fontSize":"150px"}}/></p>
-                <h3 className="text-center">Учебный материал</h3>
-                <p >Бесплатные и креативные пакеты уроков и материалы для школьных уроков DaF/DaZ</p>
-                </div>
-            </div>
-            <div className="col-md-4 p-0 pb-3 text-white"   >
-            <div className="p-5 m-2 h-100" style={{"backgroundColor":"#C79E71"}}>
-                <p className="text-center"><FcComboChart style={{"color":"#C67719", "fontSize":"150px"}}/></p>
-                <h3 className="text-center">Полезно</h3>
-                <p >Информация о жизни в Германии и Австрии – практическая и особенно важная для мигрантов</p>
-                </div>
-            </div>
-            <div className="col-md-4 text-white p-0 pb-3"  >
-                <div className="p-5 m-2 h-100" style={{"backgroundColor":"#8FA485"}}>
-                <p className="text-center"><FcDownload style={{"color":"#C67719", "fontSize":"150px"}}/></p>
-                <h3 className="text-center">Учебный материал</h3>
-                <p >ЧБесплатные и креативные пакеты уроков и материалы для школьных уроков DaF/DaZ</p>                    
-                </div>
-
-            </div>
+            </div> */}
     </div>
 
     </div>

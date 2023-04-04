@@ -9,7 +9,7 @@ export const Welcome = () => {
     <h1 className={Style.title}>WILLKOMMEN</h1>
     <p style={{"textTransform": "uppercase"}}>( ДОБРО ПОЖАЛОВАТЬ {data.username})</p>
     <div className="text-center mt-5">
-    <Link to={"/Courses"} className={Style.btn}>на курсы</Link>
+    <Link to={"/"} className={Style.btn}>Главная</Link>
     </div>
   </div>
   </div>
