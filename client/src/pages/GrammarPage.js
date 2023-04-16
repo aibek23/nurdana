@@ -37,7 +37,7 @@ const grammarListData = [
 const GrammarPage = () => {
   return (
     <section className="section-sm">
-        <nav aria-label="breadcrumb">
+        {/* <nav aria-label="breadcrumb">
         <div className='container'>
         <ol className="breadcrumb">
     <li className="breadcrumb-item"><a href="#">Home</a></li>
@@ -45,7 +45,7 @@ const GrammarPage = () => {
     <li className="breadcrumb-item active" >Data</li>
   </ol>
   </div>
-</nav>
+</nav> */}
 
 
       <div className="container frame">
