@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.766ab562.css",
+    "main.js": "/static/js/main.5a0b2ce1.js",
+    "static/js/845.e49dd791.chunk.js": "/static/js/845.e49dd791.chunk.js",
+    "static/js/787.64a96f0c.chunk.js": "/static/js/787.64a96f0c.chunk.js",
+    "static/media/A1_1.png": "/static/media/A1_1.abb8495dbe841c2db291.png",
+    "static/media/page_1.png": "/static/media/page_1.1fd66c473db525ba8ad2.png",
+    "static/media/tile2.png": "/static/media/tile2.8d60dc866d86153c2a5f.png",
+    "static/media/135221.png": "/static/media/135221.e8bd39973096389ede29.png",
+    "static/media/willkommen.m4a": "/static/media/willkommen.9ddd34866152b849f601.m4a",
+    "static/media/wie_geht_es_dir.m4a": "/static/media/wie_geht_es_dir.2a6eb4d97455e16de106.m4a",
+    "static/media/sein.m4a": "/static/media/sein.ee042b98c14a442531e8.m4a",
+    "static/media/hissen.m4a": "/static/media/hissen.ce415fc2f3008300407e.m4a",
+    "static/media/adverbs.png": "/static/media/adverbs.4b2622eebac278c62d96.png",
+    "static/media/verbs.png": "/static/media/verbs.31ce828affb3404c5a4b.png",
+    "static/media/syntax.png": "/static/media/syntax.92fdd171932dafb6849f.png",
+    "static/media/prepositions.png": "/static/media/prepositions.1f609cf3c84b28c3435f.png",
+    "static/media/pronouns.png": "/static/media/pronouns.bb327a8beb4579fc5e8c.png",
+    "static/media/course_a2.png": "/static/media/course_a2.2b20d04383d790cd80d4.png",
+    "static/media/course_a1.png": "/static/media/course_a1.2c5c33618e3631456154.png",
+    "static/media/nouns.png": "/static/media/nouns.d232863932a50c325997.png",
+    "static/media/phonetics.png": "/static/media/phonetics.f11d0b5d7e326c52bec1.png",
+    "static/media/numerals.png": "/static/media/numerals.5a19c850dcf2188194bd.png",
+    "static/media/course_b1.png": "/static/media/course_b1.1541536ed5ccc859a676.png",
+    "static/media/course_b2.png": "/static/media/course_b2.fbc990d5ae81e5b3ec1e.png",
+    "static/media/adjectives.png": "/static/media/adjectives.36bd073cca73d26dec52.png",
+    "index.html": "/index.html",
+    "main.766ab562.css.map": "/static/css/main.766ab562.css.map",
+    "main.5a0b2ce1.js.map": "/static/js/main.5a0b2ce1.js.map",
+    "845.e49dd791.chunk.js.map": "/static/js/845.e49dd791.chunk.js.map",
+    "787.64a96f0c.chunk.js.map": "/static/js/787.64a96f0c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.766ab562.css",
+    "static/js/main.5a0b2ce1.js"
+  ]
+}

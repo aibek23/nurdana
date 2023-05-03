@@ -12,6 +12,11 @@ import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai"; // ико�
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi"; // иконки для следующего и предыдущего трека
 import { IconContext } from "react-icons"; // для кастомизации иконок
 import Herzlich from "../../img/A1_1.png"
+import Horen from "../../img/101216.png"
+import Fokus from "../../img/103921.png"
+import Schreibt from "../../img/104456.png"
+import Antvorten from "../../img/120831.png"
+import Ergenzin from "../../img/121110.png"
 import Title2 from "../../img/tile2.png"
 const audioTracks = [];
 const defaultTrackIndex = 0;
@@ -72,7 +77,7 @@ const Teil2 = () => {
     return (
 
         <div className="container text-center ">
-            <img className="mt-5" src={Title2} style={{ width: 500 }} alt="" />
+            <img className="mt-5" src={Title2} style={{ maxWidth: "75vw" }} alt="" />
             <div className="rowTime">
                 <div className="componentTime">
                     <div className="containerPleer">
@@ -313,34 +318,123 @@ const Teil2 = () => {
                 </tbody>
             </table>
             <h2>Ja\Nein-Fragen</h2>
-            <p>Ja/Nein-Fragen называются так, <br/>потому что ответить на них можно одним словом ja, nein.
+            <p>Ja/Nein-Fragen называются так, <br />потому что ответить на них можно одним словом ja, nein.
             </p>
             <table className="table_a1">
-  <thead>
-    <tr>
-      <th>Fragen</th>
-      <th>Deutsch</th>
-      <th>Russisch</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Ist das Ihre Handynummer?</td>
-      <td>Это ваш номер телефона?</td>
-      <td>Ja, meine Nummer ist +996 700 700 555</td>
-    </tr>
-    <tr>
-      <td>Ist das dein E-Mail-Adresse?</td>
-      <td>Это твой эл.адрес?</td>
-      <td>Ja, das meine E-Mail-Adresse</td>
-    </tr>
-    <tr>
-      <td>Hast du Skype?</td>
-      <td>У тебя есть скайп?</td>
-      <td>Nein, ich habe kein Skype</td>
-    </tr>
-  </tbody>
-</table>
+                <thead>
+                    <tr>
+                        <th>Fragen</th>
+                        <th>Deutsch</th>
+                        <th>Russisch</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ist das Ihre Handynummer?</td>
+                        <td>Это ваш номер телефона?</td>
+                        <td>Ja, meine Nummer ist +996 700 700 555</td>
+                    </tr>
+                    <tr>
+                        <td>Ist das deine E-Mail-Adresse?</td>
+                        <td>Это твой эл.адрес?</td>
+                        <td>Ja, das ist meine E-Mail-Adresse</td>
+                    </tr>
+                    <tr>
+                        <td>Hast du Skype?</td>
+                        <td>У тебя есть скайп?</td>
+                        <td>Nein, ich habe kein Skype</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>4. Nesrins Freunde</h2>
+            <p>Hören Sie die Dialoge. Ordnen Sie die Dialoge den Fotos zu. Lesen Sie die Dialoge laut.</p>
+            <img className="mt-5" src={Horen} style={{ width: "100%" }} alt="" />
+            <h2>Dialog 1</h2>
+            <div>
+
+                <ul className="Dialog_1">
+                    <li>- Hallo, wie heißt du?</li>
+                    <li>- Pablo.</li>
+                    <li>- Woher kommst du?</li>
+                    <li>- Aus León.</li>
+                    <li>- Sprichst du Portugiesisch?</li>
+                    <li>- Nein, ich spreche Spanisch.</li>
+                    <li>- Ich bin Spanier!</li>
+                    <li>- Ach so.</li>
+                    <li>- Und wie heißt du?</li>
+                    <li>- Karin.</li>
+                </ul>
+                <h2>Dialog 2</h2>
+                <ul className="Dialog_1">
+                    <li>- Das ist Dana.</li>
+                    <li>- Hallo, Dana.</li>
+                    <li>- Dana, das ist Karin.</li>
+                    <li>- Hallo, Karin. Kommst du aus Deutschland?</li>
+                    <li>- Ja, ich bin Deutsche. Und du?</li>
+                    <li>- Ich komme aus Polen.</li>
+                    <li>- Dzien dobry.</li>
+                    <li>- Toll, du sprichst Polnisch!</li>
+                    <li>- Ja, ein bisschen.</li>
+                </ul>
+
+                <h2>Dialog 3</h2>
+                <ul className="Dialog_1">
+                    <li>- Und das sind Evdokia und Kyra. Sie kommen aus Griechenland aus Athen.</li>
+                    <li>- Hallo, ich bin Karin.</li>
+                    <li>- Guten Abend, Karin.</li>
+                    <li>- Hallo.</li>
+                    <li>- Ihr sprecht aber gut Deutsch.</li>
+                    <li>- Oh, wir lernen Deutsch, aber Deutsch ist ein bisschen schwer.</li>
+                </ul>
+            </div>
+            <h2>5. Markieren Sie die Verbformen in den Dialogen in 4 und ergänzen Sie die Tabelle.</h2>
+            <img className="mt-5" src={Fokus} style={{ width: "100%" }} alt="" />
+            <ul className="Dialog_1">
+                <li>Sg(Sindular)-единственное число </li>
+                <li>Pl(Plural)-множественное число</li>
+            </ul>
+            <h2>6. Ein Steckbrief - Ergänzen Sie den Text.</h2>
+            <ul className="Dialog_1">
+                <li>spreche	ist	sind	komme	lernen		bin	lerne </li>
+                <li>Mein name ist Tian Xu. Ich….....aus China. Ich……….Chinese und…………Chinesich und ein bisschen Deutsch. Jetzt…………… ich Deutsch. Dana und Polo………meine Freunde. Sie……………auch Deutsch.	</li>
+            </ul>
+            <h2>7. Pablo schreibt ein Nachricht </h2>
+            <ul className="Dialog_1">
+                <li>Lesen Sie die Texte. Welches Foto passt? Ordnen Sie zu.</li>
+            </ul>
+            <img className="mt-5" src={Schreibt} style={{ width: "100%" }} alt="" />
+            <ul className="Dialog_1 mt-4">
+                <li>b.Lesen Sie die Nachricht noch einmal. Kreuzen Sie an: richtig (R) oder falsch (F)?</li>
+            </ul>
+
+            <ul className="Dialog_1 mt-3">
+                <li>1. Im Deutschkurs sind 14 Leute.</li>
+                <li>2. Zwei Leute kommen aus Portugal,</li>
+                <li>3. Marek spricht Polnisch.</li>
+                <li>4. Der Brasilianer ist 32 Jahre alt.</li>
+                <li>5. Kamila ist die Lehrerin.</li>
+                <li>6. Anne spricht vier Sprachen. </li>
+
+
+            </ul>
+            <h2>8. Nesrin antwortet</h2>
+            <ul className="Dialog_1" >
+                <li>
+                    Lesen sie den Text. Wer sind die Personen auf den Fotos?
+                </li>
+            </ul>
+            <img className="mt-5" src={Antvorten} style={{ width: "100%" }} alt="" />
+            <ul className="Dialog_1" >
+                <li>
+                    b. Ergänzen Sie den Text mit den Informationen aus Aufgabe
+                </li>
+                <li>              8.
+                    Nesrin arbeitet in der……………..Meyer & Sohn. Dort sind acht…………
+                    Sie kommen aus Deutschland, aus der………………..und aus Litauen.
+                    Die Freundin von Nesrin heißt………………………Sie arbeitet als……..... Jochen arbeitet im Büro. Er ist der…………….</li>
+            </ul>
+            <img className="mt-5" src={Ergenzin} style={{ width: "80%" }} alt="" />
+
         </div>
     )
 }

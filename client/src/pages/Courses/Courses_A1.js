@@ -8,15 +8,16 @@ const Courses_A1 = () => {
 
         <div className="container text-center" style={{"height":"95vh"}}>
             <div className="row">
-                
-
             <div className="col-lg-5" >
             <ul className="mt-5">
                 <li>
-                    <Link to={"/Courses/teil1"}><h2> tile - 1 </h2></Link>
+                    <Link to={"/Courses/teil1"}><h2> Lektion 1 </h2></Link>
                 </li>
                 <li>
-                    <Link to={"/Courses/teil2"}> <h2> tile - 2 </h2></Link>
+                    <Link to={"/Courses/teil2"}> <h2> Lektion 2</h2></Link>
+                </li>
+                <li>
+                    <Link to={"/Courses/teil3"}> <h2> Lektion 3</h2></Link>
                 </li>
            </ul>
             </div>

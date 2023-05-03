@@ -8,6 +8,9 @@ import { FcCamcorderPro } from "react-icons/fc";
 import { FcComboChart } from "react-icons/fc";
 import { FcDownload } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import tile1 from "../img/tile_1.png"
+import tile2 from "../img/tile_2.png"
+import tile3 from "../img/tile_3.png"
 
 
 
@@ -42,43 +45,43 @@ export const HomePage = () =>{
     <div className="container">
     <div className="row mt-5 mb-5 align-itemes-center justify-content-center" style={{minHeight:"60vh"}}>
         
-            <Link to="/Courses_A1"
+            <Link to="/teil1"
             className={cards[0].class}
             style={{ width: "19rem",height:"370px" , margin: "25px","backgroundColor":"#A56068","textDecoration":"none" }}
             onMouseOver={() => handleCardHover(0, true)}
             onMouseOut={() => handleCardHover(0, false)}
           >
-            <p className="card-img-top"  ><FcAcceptDatabase style={{"color":"#C67719", "fontSize":"150px"}}/></p>
+            <p className="card-img-top"  ><img src={tile1} style={{"color":"#C67719","width":"19rem"}}/></p>
             <div className="card-body">
-            <h3 className="text-center">Фразы</h3>
-                <p style={{color:"white"}}>Фразы для повседневного общения, которые используются в разговорной речи для общения в повседневной жизни.                      </p>
+            <h3 className="text-center">Lektion 1 </h3>
+                {/* <p style={{color:"white"}}>Фразы для повседневного общения, которые используются в разговорной речи для общения в повседневной жизни.                      </p> */}
 
             </div>
           </Link>
           <Link
-            to="/grammar"
+            to="/teil2"
             className={cards[2].class}
             style={{ width: "19rem",height:"370px" , margin: "25px","backgroundColor":"#E9B353" ,"textDecoration":"none" }}
             onMouseOver={() => handleCardHover(2, true)}
             onMouseOut={() => handleCardHover(2, false)}
           >
-            <p className="card-img-top"  ><FcAlphabeticalSortingZa style={{"color":"#C67719", "fontSize":"150px"}}/></p>
+            <p className="card-img-top"  ><img  src={tile2} style={{"color":"#C67719", "width":"19rem"}}/></p>
             <div className="card-body">
-            <h3 className="text-center">Грамматика</h3>
-                <p style={{color:"white"}}>Важнейшие правила с примерами правильного использования немецкой грамматики.                      </p>
+            <h3 className="text-center">Lektion 2</h3>
+                {/* <p style={{color:"white"}}>Важнейшие правила с примерами правильного использования немецкой грамматики.                      </p> */}
             </div>
           </Link>
           <Link
-           to="/Media"
+           to="/teil3"
             className={cards[3].class}
             style={{ width: "19rem" ,height:"370px", margin: "25px","backgroundColor":"#3A9389"  ,"textDecoration":"none" }}
             onMouseOver={() => handleCardHover(3, true)}
             onMouseOut={() => handleCardHover(3, false)}
           >
-            <p className="card-img-top"  ><FcCamcorderPro style={{"color":"#C67719", "fontSize":"150px"}}/></p>
+            <p className="card-img-top"  ><img src={tile3} style={{"color":"#C67719", "width":"19rem"}}/></p>
             <div className="card-body">
-            <h3 className="text-center">Медиатека</h3>
-                <p style={{color:"white"}}>Мультимедийное содержание: многочисленные подлинные тексты, а также аудио- и видеоматериалы на немецком языке.</p>
+            <h3 className="text-center">Lektion 3</h3>
+                {/* <p style={{color:"white"}}>Мультимедийное содержание: многочисленные подлинные тексты, а также аудио- и видеоматериалы на немецком языке.</p> */}
             </div>
           </Link>
           <div className="col-md-4 p-0 pb-3 text-white "    >

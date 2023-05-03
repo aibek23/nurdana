@@ -12,6 +12,7 @@ import {Welcome} from "./pages//Welcome";
 import Courses_A1 from "./pages/Courses/Courses_A1"
 import Teil1 from './pages/Courses/Teil1'
 import Teil2 from './pages/Courses/Teil2'
+import Teil3 from './pages/Courses/Teil3'
 
 import GrammarPage from './pages/GrammarPage'
 import Alphabet from './pages/Grammar/Alphabet'
@@ -45,8 +46,9 @@ export const useRoutes = (isAuthenticated) => {
         <Route path='*' element={<NotFound />}/>
         <Route path="/AuthPage" exact   element={<Welcome/>} />
         <Route path="/Courses" exact   element={<Courses_A1 />} />
-        <Route path="/Courses/teil1" exact   element={<Teil1 />} />
-        <Route path="/Courses/teil2" exact   element={<Teil2 />} />
+        <Route path="/teil1" exact   element={<Teil1 />} />
+        <Route path="/teil2" exact   element={<Teil2 />} />
+        <Route path="/teil3" exact   element={<Teil3 />} />
         <Route path="/grammar" exact   element={<GrammarPage />} />
         <Route path="/grammar/phonetics" exact   element={<Alphabet />} />
         <Route path="/grammar/nouns" exact   element={<Nouns />} />
@@ -71,7 +73,10 @@ export const useRoutes = (isAuthenticated) => {
         <Route path='*' element={<NotFound />}/>
         <Route path="/" element={<HomePage />} />
         <Route path="/AuthPage" exact   element={<AuthPage />} />
-        <Route path="/Courses_A1" exact   element={<AuthPage />} />
+        <Route path="/Courses" exact   element={<AuthPage />} />
+        <Route path="/teil1" exact   element={<Teil1 />} />
+        <Route path="/teil2" exact   element={<Teil2 />} />
+        <Route path="/teil3" exact   element={<Teil3 />} />
         <Route path="/grammar" exact   element={<GrammarPage />} />
         <Route path="/grammar/phonetics" exact   element={<Alphabet />} />
         <Route path="/grammar/nouns" exact   element={<Nouns />} />

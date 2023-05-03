@@ -131,8 +131,8 @@ export const AuthPage = () => {
 
             <div className={styles.tab} role="tabpanel">
               <ul className={"nav " + styles.nav_tabs} role="tablist">
-                <li role="presentation" className={tabPanes.activebtn1 ? styles.active : ""}><button aria-controls="home" role="tab" data-toggle="tab" onClick={() => tabPane1()}>Войти в систему</button></li>
-                <li role="presentation" className={tabPanes.activebtn2 ? styles.active : ""} ><button href="#Section2" aria-controls="profile" role="tab" data-toggle="tab" onClick={() => tabPane2()}>Заявка на подключение</button></li>
+                <li role="presentation" className={tabPanes.activebtn1 ? styles.active : ""}><button aria-controls="home" role="tab" data-toggle="tab" onClick={() => tabPane1()}>Вход</button></li>
+                <li role="presentation" className={tabPanes.activebtn2 ? styles.active : ""} ><button href="#Section2" aria-controls="profile" role="tab" data-toggle="tab" onClick={() => tabPane2()}>Регистрация</button></li>
               </ul>
               <div className={styles.tab_content + " tabs mt-5"}>{tabPanes.activebtn1 ?
                 <div role="tabpanel" className="tab-pane" id="Section1" >
@@ -228,7 +228,7 @@ export const AuthPage = () => {
                         {/* <input value="None" id="checkbox1" name="check" type="checkbox"/>
                        <label htmlFor="checkbox1"></label> */}
                         <input className="form-check-input" style={{ "marginLeft": "0px" }} type="checkbox" id="flexCheckChecked" defaultChecked={checkbox} onChange={() => { setcheckbox(!checkbox); }} />
-                        <label className="form-check-label ml-3" htmlFor="flexCheckChecked">   запомнить меня
+                        <label className="form-check-label ml-3" htmlFor="flexCheckChecked">запомнить меня
                         </label>
                       </div>
                     </div>
