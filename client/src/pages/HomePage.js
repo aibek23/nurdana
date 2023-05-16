@@ -11,13 +11,14 @@ import { Link } from "react-router-dom";
 import tile1 from "../img/tile_1.png"
 import tile2 from "../img/tile_2.png"
 import tile3 from "../img/tile_3.png"
+import tile4 from "../img/4.1.png"
 
 
 
 import style from "../css/HomePage.module.css"
 export const HomePage = () =>{
 
-  const [cards, setCards] = useState([    { class: "card", hovered: false },    { class: "card", hovered: false },    { class: "card", hovered: false },    { class: "card", hovered: false },  ]);
+  const [cards, setCards] = useState([    { class: "card", hovered: false },    { class: "card", hovered: false },    { class: "card", hovered: false },    { class: "card", hovered: false } , { class: "card", hovered: false }, ]);
 
   const handleCardHover = (index, hovered) => {
     setCards((prevState) => {
@@ -82,6 +83,18 @@ export const HomePage = () =>{
             <div className="card-body">
             <h3 className="text-center">Lektion 3</h3>
                 {/* <p style={{color:"white"}}>Мультимедийное содержание: многочисленные подлинные тексты, а также аудио- и видеоматериалы на немецком языке.</p> */}
+            </div>
+          </Link>
+          <Link
+           to="/teil4"
+            className={cards[4].class}
+            style={{ width: "19rem" ,height:"370px", margin: "25px","backgroundColor":"#3A9389"  ,"textDecoration":"none" }}
+            onMouseOver={() => handleCardHover(4, true)}
+            onMouseOut={() => handleCardHover(4, false)}
+          >
+            <p className="card-img-top"  ><img src={tile4} style={{"color":"#C67719", "width":"19rem"}}/></p>
+            <div className="card-body">
+            <h3 className="text-center">Lektion 4</h3>
             </div>
           </Link>
           <div className="col-md-4 p-0 pb-3 text-white "    >

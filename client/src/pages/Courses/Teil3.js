@@ -123,22 +123,125 @@ const Teil3 = () => {
                 </div>
             </div>
             {/* <h1>Немецкие фразы </h1> */}
+            <div className="row">
+
+                <div className="col-6">  <ul className="Dialog_1 mt-4">
+                    <li>das Fenster-окно</li>
+                    <li>der Tisch-стол</li>
+                    <li>das Poster-постер</li>
+                    <li>die Tafel-доска</li>
+                    <li>der Stuhl –стул</li>
+                    <li>die Tasche-сумка</li>
+                    <li>die Lampe-лампа</li>
+                    <li>der Laptoр-ноутбук</li>
+                    <li>das Tablet-планшет</li>
+                    <li>die Brille-очки</li>
+                    <li>der Kuli-ручка</li>
+                </ul></div>
+                <div className="col-6">
+                    <ul className="Dialog_1 mt-4">
+
+                        <li>das Buch-книга</li>
+                        <li>Der Bleistift - карандаш (m)</li>
+                        <li>Der Radiergummi-стирательная резинка(m)</li>
+                        <li>Der Spitzer - точилка (m)</li>
+                        <li>Das Heft - тетрадь (n)</li>
+                        <li>Das Handy - телефон (n)</li>
+                        <li>Das Deutschbuch - книга на немецком (n)</li>
+                        <li>Das Wörterbuch - словарь (n)</li>
+                        <li>Die Maus - мышь (f)</li>
+                        <li>Die Schere - ножницы (f)</li>
+                    </ul></div>
+            </div>
+
+
             <ul className="Dialog_1 mt-4">
-                <li>das Fenster-окно</li>
-                <li>der Tisch-стол</li>
-                <li>das Poster-постер</li>
-                <li>die Tafel-доска</li>
-                <li>der Stuhl –стул</li>
-                <li>die Tasche-сумка</li>
-                <li>die Lampe-лампа</li>
-                <li>der Laptoр-ноутбук</li>
-                <li>das Tablet-планшет</li>
-                <li>die Brille-очки</li>
-                <li>der Kuli-ручка</li>
-                <li>das Buch-книга</li>
+                <li>ich - mein</li>
+                <li>du - dein</li>
+                <li>er - sein</li>
+                <li>sie - ihr</li>
+                <li>es - sein</li>
+                <li>wir - unser</li>
+                <li>ihr - euer</li>
+                <li>Sie - Ihr</li>
+                <li>sie - ihr</li>
             </ul>
+            <table className="table_a1">
+                <thead >
+                    <tr>
+                        <th>SINGULAR</th>
+                        <th>Bestimmter Artikel</th>
+                        <th>Unbestimmter Artikel</th>
+                        <th>Possessiveartikel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>der</td>
+                        <td>der Kuli</td>
+                        <td>ein Kuli</td>
+                        <td>mein/dein Kuli</td>
+                    </tr>
+                    <tr>
+                        <td>das</td>
+                        <td>das Handy</td>
+                        <td>ein Handy</td>
+                        <td>mein/dein Handy</td>
+                    </tr>
+                    <tr>
+                        <td>die</td>
+                        <td>die Brille</td>
+                        <td>eine Brille</td>
+                        <td>meine/deine Brille</td>
+                    </tr>
+                </tbody>
+            </table>
 
-
+            <div class="container d-flex flex-wrap " style={{"flexDirection":"column"}}>
+                <h1>Отрицания в немецком языке</h1>
+                <p>Есть два типа отрицаний:</p>
+                <ul style={{"textAlign":"start"}}>
+                    <li>kein (для отрицания имён существительных);</li>
+                    <li>nicht (для отрицания всех остальных частей речи).</li>
+                </ul>
+                <h2>Отрицание с помощью "kein"</h2>
+                <p>"Kein" ведет себя как неопределенный артикль и склоняется в зависимости от рода, числа и падежа:</p>
+                <table className="table_a1">
+                    <thead>
+                        <tr>
+                            <th>Исходное выражение</th>
+                            <th>Отрицание</th>
+                            <th>Перевод</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Das ist ein Buch</td>
+                            <td>Das ist kein Buch</td>
+                            <td>Это книга / Это не книга</td>
+                        </tr>
+                        <tr>
+                            <td>Ich sehe eine Katze</td>
+                            <td>Ich sehe keine Katze</td>
+                            <td>Я вижу собаку / Я не вижу никакую собаку</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Отрицание с помощью "nicht"</h2>
+                <p style={{"textAlign":"start"}}>Чтобы отрицать существительные с определённым артиклем, или притяжательным местоимением, или другие части речи, или всё предложение в целом, нужно использовать частичку "nicht".</p>
+                <p style={{"textAlign":"start"}}>И главный наш вопрос: где она должна стоять? Как и в русском, она может находится на разных позициях в зависимости от того, что мы отрицаем и на чем мы хотим сделать акцент. Но для отрицания всего предложения у "nicht" есть четкая позиция:</p>
+                <ol style={{"textAlign":"start"}}>
+                    <li>Перед прилагательным или наречием: <code>Das ist nicht lustig</code> — это не весело.</li>
+                    <li>Перед предлогом:
+                    <code> Er kommt nicht aus Deutschland</code> — он не из Германии.</li>
+                    <li>Перед вторым глаголом:
+                    <code>Ich kann heute nicht kommen </code>— я сегодня не могу прийти.</li>
+                    <li>Перед определенным артиклем или притяжательным местоимением:
+                    <code>Ich sehe nicht den Hund </code>— я не вижу собаку (конкретную собаку).</li>
+                    <li> В конце предложения, если нету ничего из вышеуказанного:
+                    <code>Ich arbeite heute Nachmittag nicht</code> — я не работаю сегодня во второй половине дня </li>
+                </ol>
+            </div>
         </div>
     )
 }

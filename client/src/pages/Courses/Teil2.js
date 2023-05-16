@@ -1,17 +1,15 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useSound from "use-sound"; //для работы со звуком
-import aude1 from "../../audeo/willkommen.m4a";
-import aude2 from "../../audeo/wie_geht_es_dir.m4a"
-import aude3 from "../../audeo/hissen.m4a"
-// import aude3 from "../../audeo/ich.m4a"
-import aude4 from "../../audeo/sein.m4a"
-
+// import aude1 from "../../audeo/willkommen.m4a";
+// import aude2 from "../../audeo/wie_geht_es_dir.m4a"
+// import aude3 from "../../audeo/hissen.m4a"
+// import aude4 from "../../audeo/sein.m4a"
 
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai"; // иконки для воспроизведения и паузы
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi"; // иконки для следующего и предыдущего трека
 import { IconContext } from "react-icons"; // для кастомизации иконок
-import Herzlich from "../../img/A1_1.png"
+// import Herzlich from "../../img/A1_1.png"
 import Horen from "../../img/101216.png"
 import Fokus from "../../img/103921.png"
 import Schreibt from "../../img/104456.png"
@@ -134,46 +132,6 @@ const Teil2 = () => {
                         <th>Zahl</th>
                         <th>Aussprache</th>
                         <th>Deutsch</th>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>драйцэйн</td>
-                        <td>dreizehn</td>
-                    </tr>
-                    <tr>
-                        <td>14</td>
-                        <td>фирцэйн</td>
-                        <td>vierzehn</td>
-                    </tr>
-                    <tr>
-                        <td>15</td>
-                        <td>фюнфцэйн</td>
-                        <td>fünfzehn</td>
-                    </tr>
-                    <tr>
-                        <td>16</td>
-                        <td>зэхьцэйн</td>
-                        <td>sechzehn</td>
-                    </tr>
-                    <tr>
-                        <td>17</td>
-                        <td>зипцэйн</td>
-                        <td>siebzehn</td>
-                    </tr>
-                    <tr>
-                        <td>18</td>
-                        <td>ахтцэйн</td>
-                        <td>achtzehn</td>
-                    </tr>
-                    <tr>
-                        <td>19</td>
-                        <td>нойнцэйн</td>
-                        <td>neunzehn</td>
-                    </tr>
-                    <tr>
-                        <td>20</td>
-                        <td>цванцихь</td>
-                        <td>zwanzig</td>
                     </tr>
                     <tr>
                         <td>21</td>
@@ -323,7 +281,8 @@ const Teil2 = () => {
             <table className="table_a1">
                 <thead>
                     <tr>
-                        <th>Fragen</th>
+                        <th>Deutsch</th>
+                        <th>Russisch</th>
                         <th>Deutsch</th>
                         <th>Russisch</th>
                     </tr>
@@ -333,16 +292,19 @@ const Teil2 = () => {
                         <td>Ist das Ihre Handynummer?</td>
                         <td>Это ваш номер телефона?</td>
                         <td>Ja, meine Nummer ist +996 700 700 555</td>
+                        <td>Да, мой номер +996 700 700 555</td>
                     </tr>
                     <tr>
                         <td>Ist das deine E-Mail-Adresse?</td>
                         <td>Это твой эл.адрес?</td>
                         <td>Ja, das ist meine E-Mail-Adresse</td>
+                        <td>Да, это мой адрес электронной почты</td>
                     </tr>
                     <tr>
                         <td>Hast du Skype?</td>
                         <td>У тебя есть скайп?</td>
                         <td>Nein, ich habe kein Skype</td>
+                        <td>Нет, у меня нет Skype</td>
                     </tr>
                 </tbody>
             </table>
@@ -387,18 +349,53 @@ const Teil2 = () => {
                     <li>- Oh, wir lernen Deutsch, aber Deutsch ist ein bisschen schwer.</li>
                 </ul>
             </div>
-            <h2>5. Markieren Sie die Verbformen in den Dialogen in 4 und ergänzen Sie die Tabelle.</h2>
-            <img className="mt-5" src={Fokus} style={{ width: "100%" }} alt="" />
+            <table className="table_a1">
+  <tr>
+    <th>Личное местоимение</th>
+    <th>Глагол "lernen"</th>
+    <th>Глагол "sprechen"</th>
+  </tr>
+  <tr>
+    <td>ich (я)</td>
+    <td>lerne (учу)</td>
+    <td>spreche (говорю)</td>
+  </tr>
+  <tr>
+    <td>du (ты)</td>
+    <td>lernst (учишь)</td>
+    <td>sprichst (говоришь)</td>
+  </tr>
+  <tr>
+    <td>er/sie/es (он/она/оно)</td>
+    <td>lernt (учит)</td>
+    <td>spricht (говорит)</td>
+  </tr>
+  <tr>
+    <td>wir (мы)</td>
+    <td>lernen (учимся)</td>
+    <td>sprechen (говорим)</td>
+  </tr>
+  <tr>
+    <td>ihr (вы)</td>
+    <td>lernt (учите)</td>
+    <td>sprecht (говорите)</td>
+  </tr>
+  <tr>
+    <td>sie/Sie (они/вы)</td>
+    <td>lernen (учатся)</td>
+    <td>sprechen (говорят)</td>
+  </tr>
+</table>
             <ul className="Dialog_1">
                 <li>Sg(Sindular)-единственное число </li>
                 <li>Pl(Plural)-множественное число</li>
             </ul>
-            <h2>6. Ein Steckbrief - Ergänzen Sie den Text.</h2>
+            <h2>5. Ein Steckbrief - Ergänzen Sie den Text.</h2>
             <ul className="Dialog_1">
-                <li>spreche	ist	sind	komme	lernen		bin	lerne </li>
+                <li>spreche , ist ,	sind , komme , lernen ,	bin	, lerne </li>
                 <li>Mein name ist Tian Xu. Ich….....aus China. Ich……….Chinese und…………Chinesich und ein bisschen Deutsch. Jetzt…………… ich Deutsch. Dana und Polo………meine Freunde. Sie……………auch Deutsch.	</li>
             </ul>
-            <h2>7. Pablo schreibt ein Nachricht </h2>
+            <h2>6. Pablo schreibt ein Nachricht </h2>
             <ul className="Dialog_1">
                 <li>Lesen Sie die Texte. Welches Foto passt? Ordnen Sie zu.</li>
             </ul>
@@ -417,7 +414,7 @@ const Teil2 = () => {
 
 
             </ul>
-            <h2>8. Nesrin antwortet</h2>
+            <h2>7. Nesrin antwortet</h2>
             <ul className="Dialog_1" >
                 <li>
                     Lesen sie den Text. Wer sind die Personen auf den Fotos?

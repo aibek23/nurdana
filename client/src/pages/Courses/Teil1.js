@@ -1,130 +1,102 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import useSound from "use-sound"; //для работы со звуком
-import aude1 from "../../audeo/willkommen.m4a";
-import aude2 from "../../audeo/wie_geht_es_dir.m4a"
-import aude3 from "../../audeo/hissen.m4a"
-// import aude3 from "../../audeo/ich.m4a"
-import aude4 from "../../audeo/sein.m4a"
-import Horen1 from "../../img/195106.png"
+import img1 from "../../img/1.png";
+import img2 from "../../img/2.png";
+import img3 from "../../img/3.png";
+import img4 from "../../img/4.png";
+import img5 from "../../img/5.png"
+import img6 from "../../img/6.png"
+import img7 from "../../img/7.png"
+import img8 from "../../img/8.png"
+import img9 from "../../img/9.png"
+import img10 from "../../img/10.png"
+import img11 from "../../img/11.png"
+import img12 from "../../img/145350.png"
+
 import Horen2 from "../../img/202037.png"
+import { Player } from "../../components/Player";
 
 
-import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai"; // иконки для воспроизведения и паузы
-import { BiSkipNext, BiSkipPrevious } from "react-icons/bi"; // иконки для следующего и предыдущего трека
-import { IconContext } from "react-icons"; // для кастомизации иконок
 import Herzlich from "../../img/A1_1.png"
-import Teil2 from "../../img/tile2.png"
-const audioTracks = [aude1, aude2, aude3, aude4];
-const defaultTrackIndex = 0;
+
 const Teil1 = () => {
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [trackIndex, setTrackIndex] = useState(0);
-    const [play, { pause, duration, sound }] = useSound(audioTracks[trackIndex]);
-    const [currTime, setCurrTime] = useState({
-        min: "0",
-        sec: "00",
-    });
-    const [seconds, setSeconds] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (sound && isPlaying) {
-                setSeconds(sound.seek());
-                const min = Math.floor(sound.seek() / 60);
-                const sec = Math.floor(sound.seek() % 60) > 9 ? Math.floor(sound.seek() % 60) : "0" + Math.floor(sound.seek() % 60);
-                setCurrTime({
-                    min,
-                    sec,
-                });
-            }
-        }, 1000);
-        return () => clearInterval(interval);
-    }, [sound, isPlaying]);
-
-    const playingButton = (e) => {
-
-        // if (isPlaying) {
-        //     pause();
-        //     setIsPlaying(false);
-        // } else {
-        //     play();
-        //     setIsPlaying(true);
-        // }
-    };
-
-    const useTrackButton = () => {
-        pause();
-        setIsPlaying(false);
-        setCurrTime({ min: "0", sec: "00", })
-        const nextIndex = (trackIndex + 1) % audioTracks.length;
-        setTrackIndex(nextIndex);
-        const [playNext] = useSound(audioTracks[nextIndex]);
-        playNext();
-    };
-
-    const usePrevTrackButton = () => {
-        pause();
-        setIsPlaying(false);
-        setCurrTime({ min: "0", sec: "00", })
-        const prevIndex = (trackIndex + audioTracks.length - 1) % audioTracks.length;
-        setTrackIndex(prevIndex);
-        const [playPrev] = useSound(audioTracks[prevIndex]);
-        playPrev();
-    };
     return (
 
         <div className="container text-center ">
-            <img className="mt-5" src={Herzlich} style={{ width: 500 }} alt="" />
-            <div className="rowTime">
-                <div className="componentTime">
-                    <div className="containerPleer">
-                        {/* <div className="playButton " onClick={usePrevTrackButton}>
-                        <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-                            <BiSkipPrevious />
-                        </IconContext.Provider>
-                    </div> */}
-                        {!isPlaying ? (
-                            <div className="playButton" onClick={() => { setTrackIndex(1); playingButton() }}>
-                                <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-                                    <AiFillPlayCircle />
-                                </IconContext.Provider>
-                            </div>
-                        ) : (
-                            <div className="playButton" onClick={() => { setTrackIndex(1); playingButton() }}>
-                                <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-                                    <AiFillPauseCircle />
-                                </IconContext.Provider>
-                            </div>
-                        )}
-                        {/* <div className="playButton" onClick={useTrackButton}>
-                        <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-                            <BiSkipNext />
-                        </IconContext.Provider>
-                    </div> */}
-                        <span>
-                            {currTime.min}:{currTime.sec}
-                        </span>
-                        <input
-                            type="range"
-                            min="0"
-                            max={duration / 1000}
-                            default="0"
-                            value={seconds}
-                            className="timeline"
-                            onChange={(e) => {
-                                sound.seek([e.target.value]);
-                            }}
-                        />
-                        <span>
-                            {Math.floor((duration / 1000) / 60)} : {Math.floor((duration / 1000) % 60)}
-                        </span>
+            <div className="d-flex flex-column align-itmes-center justify-content-center" style={{ "alignItems": "center" }}>
+                <img className="mt-5" src={Herzlich} style={{ width: 600 }} alt="" />
+               <Player props={2.99} />
+                
+                {//<Player props={1} />
+                }
+                <img className="mt-5" src={img1} style={{ width: 600 }} alt="" />
+                {//<Player props={2} />
+                }
+                <img className="mt-5" src={img2} style={{ width: 600 }} alt="" />
+                {//<Player props={3} />
+                }
+                <img className="mt-5" src={img3} style={{ width: 600 }} alt="" />
+                {//<Player props={4} />
+                }
+                {//<Player props={5} />
+                }
+                <img className="mt-5" src={img4} style={{ width: 600 }} alt="" />
+                {//<Player props={6} />
+                }
+                <img className="mt-5" src={img5} style={{ width: 600 }} alt="" />
+                {//<Player props={7} />
+                }
+                <img className="mt-5" src={img6} style={{ width: 600 }} alt="" />
+                {//<Player props={8} />
+                }
+                <div className="container d-flex flex-wrap mt-3" style={{ "flexDirection": "column" }}>
+                    <p>(1)Ich wohne jetzt in München-Pasing.			(2)Ich komme aus León.</p>
+                    <div className="dialogue-container">
+                        <div className="dialogue" style={{ "textAlign": "start" }}>
+                            <p>Woher kommen Sie, Frau Dumitru?</p>
+                            <p>Ich komme aus Rumänien, aus Deva.</p>
+                            <p>Und wo wohnen Sie jetzt?</p>
+                            <p>Ich wohne in München. Und Sie, Frau Dahms?</p>
+                            <p>Ich komme aus Berlin und wohne jetzt in München-Pasing.</p>
+                        </div>
+                        <div className="dialogue" style={{ "textAlign": "start" }}>
+                            <p>Hallo, ich bin Pablo und wer bist du?</p>
+                            <p>Ich heiße Dana. Ich komme aus Lublin. Das ist in Polen.</p>
+                            <p>Woher kommst du?</p>
+                            <p>Ich komme aus León, Spanien.</p>
+                            <p>Und wo wohnst du jetzt?</p>
+                            <p>In München.</p>
+                        </div>
                     </div>
                 </div>
-
-
             </div>
-
+            {//<Player props={9} />
+            }
+            <img className="mt-5" src={img7} style={{ width: 600 }} alt="" />
+            {//<Player props={10} />
+                }
+            <img className="mt-5" src={img8} style={{ width: 600 }} alt="" />
+            {//<Player props={11} />
+                }
+            <img className="mt-5" src={img9} style={{ width: 600 }} alt="" />
+            {//<Player props={12} />
+                }
+            <img className="mt-5" src={img10} style={{ width: 600 }} alt="" />
+            {//<Player props={13} />
+                }
+            <img className="mt-5" src={img11} style={{ width: 600 }} alt="" />
+            {//<Player props={14} />
+            }
+            <div className="dialogue" style={{ "textAlign": "start" }}>
+                <h3>Schreiben Sie den Dialog. Hören Sie zur Kontrolle.</h3>
+                <p>Ich komme aus Chicago, USA.</p>
+                <p>Hallo, ich bin Ben. Und wer bist du?</p>
+                <p>In München.</p>
+                <p>O Ich heiße Eleni. Ich komme aus Deva.</p>
+                <p>Das ist in Rumänien. Woher kommst du?</p>
+                <p>O Und wo wohnst du jetzt?</p>
+                <p>(Hallo, ich bin Ben …)</p>
+            </div>
             <h1>Немецкие фразы приветствия и прощания</h1>
             <table className="table_a1" >
                 <tr>
@@ -180,7 +152,9 @@ const Teil1 = () => {
                     <td>А у вас? Все эти фразы очень формальны и используются в ситуациях делового общения.</td>
                 </tr>
             </table>
-            <h1>При неформальной ситуации общения используйте аналоги приведенных фраз, а именно:</h1>
+            {//<Player props={15} />
+            }
+            <h1 className="mt-5"> При неформальной ситуации общения используйте аналоги приведенных фраз, а именно:</h1>
             <table className="table_a1">
                 <tr>
                     <th>Фраза</th>
@@ -227,84 +201,65 @@ const Teil1 = () => {
                     <td>Пока! До скорой встречи!</td>
                 </tr>
             </table>
+            {//<Player props={16} />
+            }
             <h1>German Verbs</h1>
             <table className="table_a1">
                 <tr>
-                    <th>Personal Pronoun</th>
-                    <th>Verb Conjugation</th>
+                    <th>Личное местоимение</th>
+                    <th>Глагол "heißen"</th>
+                    <th>Глагол "sein"</th>
+                    <th>Глагол "haben"</th>
                 </tr>
                 <tr>
                     <td>ich (меня)</td>
                     <td>heiße (зовут)</td>
+                    <td>bin (быть)</td>
+                    <td>habe (иметь)</td>
                 </tr>
                 <tr>
                     <td>du (тебя)</td>
                     <td>heißt (зовут)</td>
+                    <td>bist (есть)</td>
+                    <td>hast (имеешь)</td>
                 </tr>
                 <tr>
-                    <td>er/sie/es (его\ее\его)</td>
+                    <td>er/sie/es (его/её/его)</td>
                     <td>heißt (зовут)</td>
+                    <td>ist (есть)</td>
+                    <td>hat (имеет)</td>
                 </tr>
                 <tr>
-                    <td>wir (мы)</td>
-                    <td>heißen (зовем)</td>
-                </tr>
-                <tr>
-                    <td>ihr (их)</td>
-                    <td>heißt (зовут)</td>
-                </tr>
-                <tr>
-                    <td>Sie/sie (Вас\их )</td>
+                    <td>wir (мы - нас)</td>
                     <td>heißen (зовут)</td>
+                    <td>sind (есть)</td>
+                    <td>haben (имеем)</td>
+                </tr>
+                <tr>
+                    <td>ihr (вас)</td>
+                    <td>heißt (зовут)</td>
+                    <td>seid (есть)</td>
+                    <td>habt (имеете)</td>
+                </tr>
+                <tr>
+                    <td>sie/Sie (их/Вас)</td>
+                    <td>heißen (зовут)</td>
+                    <td>sind (есть)</td>
+                    <td>haben (имеют)</td>
                 </tr>
             </table>
-            <h1>Sein - быть, являться</h1>
-            <table className="table_a1">
-                <thead>
-                    <tr>
-                        <th>Лицо</th>
-                        <th>Глагол</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ich</td>
-                        <td>bin</td>
-                    </tr>
-                    <tr>
-                        <td>du</td>
-                        <td>bist</td>
-                    </tr>
-                    <tr>
-                        <td>er/sie/es</td>
-                        <td>ist</td>
-                    </tr>
-                    <tr>
-                        <td>wir</td>
-                        <td>sind</td>
-                    </tr>
-                    <tr>
-                        <td>ihr</td>
-                        <td>seid</td>
-                    </tr>
-                    <tr>
-                        <td>Sie/sie</td>
-                        <td>sind</td>
-                    </tr>
-                </tbody>
-            </table>
+            {//<Player props={17} />
+}
             <h1>W-Fragen Beispiele</h1>
             <p>Вопросы с вопросительным словом. В немецком языке вопросительные слова начинаются с буквы W (wo, wer, was, wie). По этой причине их часто называют W-Fragen. В W-Fragen вопросительное слово всегда стоит на первом месте, а глагол на втором.</p>
             <table className="table_a1">
-
-                <tbody>
                     <tr>
                         <td>Wie heißt du?</td>
-                        <td>Меня зовут Антон</td>
+                        <td>Как тебя зовут?</td>
                     </tr>
                     <tr>
                         <td>Wer bist du?</td>
-                        <td>Я Антон</td>
+                        <td>Кто ты?</td>
                     </tr>
                     <tr>
                         <td>Woher kommst du?</td>
@@ -312,27 +267,32 @@ const Teil1 = () => {
                     </tr>
                     <tr>
                         <td>Ich komme aus Deutschland</td>
-                        <td> Я из Германии </td>
+                        <td>Я из Германии</td>
                     </tr>
                     <tr>
                         <td>Was ist das?</td>
-                        <td>Это книга</td>
+                        <td>Что это?</td>
                     </tr>
                     <tr>
-                        <td>Wo wohnst du? <br></br>Где ты живешь?</td>
-                        <td>Ich wohne in Bischkek.<br />Я живу в Бишкеке а ты?</td>
-                    </tr>
+                        <td>
+                            Wo wohnst du? </td><td>
 
+                            Где ты живешь?</td>
+
+                    </tr>
+                    <tr>
+                        <td>Ich wohne in Bischkek</td><td>Я живу в Бишкеке а ты?</td>
+                    </tr>
                     <tr>
                         <td>Ich wohne in Berlin</td>
                         <td>Я живу в Берлине.</td>
                     </tr>
-                </tbody>
+                className
             </table>
+            {//<Player props={19} />
+            }
             <h1>Länder-страны</h1>
             <table className="table_a1">
-
-                <tbody>
                     <tr>
                         <td>Kirgisistan</td>
                         <td>Кыргызстан</td>
@@ -373,12 +333,12 @@ const Teil1 = () => {
                         <td>        die USA</td>
                         <td>США</td>
                     </tr>
-                </tbody>
             </table>
-            <img className="mt-5 mb-5 container" src={Horen1} style={{ height: 250 }} alt="" />
+            {//<Player props={20} />
+}
             <h1>            Спряжение глагола wohnen – жить</h1>
             <table className="table_a1">
-                <tbody>
+                className
                     <tr>
                         <td>Ich	<span>  </span>    </td>
                         <td>	<span>  </span>    wohn+e</td>
@@ -404,13 +364,15 @@ const Teil1 = () => {
                         <td>wohn+en</td>
                     </tr>
 
-                </tbody>
+                className
             </table>
-            <h1> Спряжение глагола wohnen – жить</h1>
+            {//<Player props={21} />
+            }
+            <h1> Спряжение глагола kommen - (приехал, прибывать)</h1>
 
             <p> </p>
             <table className="table_a1">
-                <tbody>
+                className
                     <tr>
                         <td>Ich
                         </td>
@@ -437,11 +399,19 @@ const Teil1 = () => {
                         <td>kommen</td>
                     </tr>
 
-                </tbody>
+                className
             </table>
-            <p>a. Hören Sie. Welches Foto passt? Kreuzen Sie an. (Тут должен быть аудио херен)</p>
+            {//<Player props={22} />
+}
+            <h2>a. Hören Sie. Welches Foto passt? Kreuzen Sie an.</h2>
             <img className="mt-5 mb-5 container" src={Horen2} style={{ height: 350 }} alt="" />
-            <p>b Hören Sie noch einmal und lesen Sie mit. Ergänzen Sie das Formular.</p>
+            {//<Player props={23} />
+}
+            <h3>b Hören Sie noch einmal und lesen Sie mit. Ergänzen Sie das Formular.</h3>
+
+            
+            <div className="row"> 
+            <div className="col-lg-6">
             <ul className="Dialog_1">
                 <li>Wie ist Ihr Familienname?</li>
                 <li>Dumitru.</li>
@@ -460,7 +430,12 @@ const Teil1 = () => {
                 <li>Danke Frau Dumitru. Auf Wiedersehen.</li>
                 <li>Auf Wiedersehen.</li>
             </ul>
-            <ul className="Dialog_1 mt-3" style={{ color: "red" }}>
+           
+            </div>
+            <div className="col-lg-6">
+
+            <img className="mt-2 mb-2 container" src={img12} style={{ height: 350 }} alt="" />
+            <ul className="Dialog_1" style={{ color: "red" }}>
                 <li>Unternehmen: K&amp;L - Dienstleistungen GmbH</li>
                 <li>Familienname: Dumitru</li>
                 <li>Vorname: Eleni</li>
@@ -468,6 +443,9 @@ const Teil1 = () => {
                 <li>Adresse: Munchen, Blumenstraße 4, 80331</li>
                 <li>Telefon: 089 63822392</li>
             </ul>
+            </div>
+         
+            </div>
             <table className="table_a1">
                 <tr>
                     <th>Numerisch</th>
@@ -539,7 +517,49 @@ const Teil1 = () => {
                     <td>zwölf</td>
                     <td>двенадцать</td>
                 </tr>
+                <tr>
+                    <td>13</td>
+                    <td>драйцэйн</td>
+                    <td>dreizehn</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>фирцэйн</td>
+                    <td>vierzehn</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>фюнфцэйн</td>
+                    <td>fünfzehn</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>зэхьцэйн</td>
+                    <td>sechzehn</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>зипцэйн</td>
+                    <td>siebzehn</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>ахтцэйн</td>
+                    <td>achtzehn</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>нойнцэйн</td>
+                    <td>neunzehn</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>цванцихь</td>
+                    <td>zwanzig</td>
+                </tr>
             </table>
+            {//<Player props={15} />
+            }
         </div>
     )
 }
