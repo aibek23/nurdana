@@ -20,9 +20,13 @@ const Teil3 = () => {
   return (
     <div className="container text-center ">
       <img className="mt-5" src={Lektion} style={{ maxWidth: "70vw" }} alt="" />
+      <Player props={40} />
+      <Player props={41} />
+      <Player props={42} />
       <img className="mt-5" src={Spitzer} style={{ maxWidth: "70vw" }} alt="" />
+      <Player props={43} />
       <img className="mt-5" src={Student} style={{ maxWidth: "70vw" }} alt="" />
-
+     
       {/* <h1>Немецкие фразы </h1> */}
       <div className="row">
         <div className="col-6">
@@ -173,11 +177,13 @@ const Teil3 = () => {
           </li>
         </ol>
       </div>
-      <Player props={21} />
+      <Player props={44} />
       <img className="  mt-3 mb-5" src={img1} style={{ width: 600 }} alt="" />
-      <Player props={21} />
+      <Player props={45} />
+      <Player props={46} />
+      <Player props={47} />
       <img className="  mt-3 mb-5" src={img2} style={{ width: 600 }} alt="" />
-      <Player props={21} />
+      <Player props={48} />
       <img className="  mt-3 mb-5" src={img3} style={{ width: 600 }} alt="" />
       <div className="row justify-content-center">
         <div>
@@ -226,6 +232,7 @@ const Teil3 = () => {
           </div>
         </div>
       </div>
+
       <div className="row justify-content-center">
         <img className="mt-5" src={img7} style={{ width: 250 }} alt="" />
         <img className="mt-5" src={img8} style={{ width: 250 }} alt="" />
@@ -240,9 +247,9 @@ const Teil3 = () => {
           <li>- Ja, danke.</li>
         </ul>
       </div>
-      <Player props={21} />
+      <Player props={49} />
       <img className=" mt-3 mb-5" src={img11} style={{ width: 600 }} alt="" />
-      <Player props={21} />
+      <Player props={50} />
       <img className="  mt-3 mb-5" src={img10} style={{ width: 600 }} alt="" />
     </div>
   );

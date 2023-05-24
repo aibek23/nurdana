@@ -70,7 +70,7 @@ export const AuthPage = () => {
 
     try {
       const data = await request('/api/auth/login', 'POST', { ...formL });
-      auth.login(data.token, data.email, data.username, checkbox);
+      auth.login(data.token, data.userId, data.username, checkbox);
       window.location.reload();
     } catch (e) {
 

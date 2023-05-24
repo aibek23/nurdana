@@ -8,7 +8,8 @@ import img4 from "../../img/031714.png";
 import img5 from "../../img/031734.png";
 import img6 from "../../img/031759.png";
 import img7 from "../../img/031823.png";
-
+import img8 from "../../img/222203.png";
+import { Player } from "../../components/Player";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai"; // иконки для воспроизведения и паузы
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi"; // иконки для следующего и предыдущего трека
 import { IconContext } from "react-icons"; // для кастомизации иконок
@@ -22,117 +23,17 @@ import Title2 from "../../img/tile2.png";
 const audioTracks = [];
 const defaultTrackIndex = 0;
 const Teil2 = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [trackIndex, setTrackIndex] = useState(defaultTrackIndex);
-  const [play, { pause, duration, sound }] = useSound(audioTracks[trackIndex]);
-  const [currTime, setCurrTime] = useState({
-    min: "0",
-    sec: "00",
-  });
-  const [seconds, setSeconds] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (sound && isPlaying) {
-        setSeconds(sound.seek());
-        const min = Math.floor(sound.seek() / 60);
-        const sec =
-          Math.floor(sound.seek() % 60) > 9
-            ? Math.floor(sound.seek() % 60)
-            : "0" + Math.floor(sound.seek() % 60);
-        setCurrTime({
-          min,
-          sec,
-        });
-      }
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [sound, isPlaying]);
-
-  const playingButton = () => {
-    if (isPlaying) {
-      pause();
-      setIsPlaying(false);
-    } else {
-      play();
-      setIsPlaying(true);
-    }
-  };
-
-  const useTrackButton = () => {
-    pause();
-    setIsPlaying(false);
-    setCurrTime({ min: "0", sec: "00" });
-    const nextIndex = (trackIndex + 1) % audioTracks.length;
-    setTrackIndex(nextIndex);
-    const [playNext] = useSound(audioTracks[nextIndex]);
-    playNext();
-  };
-
-  const usePrevTrackButton = () => {
-    pause();
-    setIsPlaying(false);
-    setCurrTime({ min: "0", sec: "00" });
-    const prevIndex =
-      (trackIndex + audioTracks.length - 1) % audioTracks.length;
-    setTrackIndex(prevIndex);
-    const [playPrev] = useSound(audioTracks[prevIndex]);
-    playPrev();
-  };
   return (
     <div className="container text-center ">
       <img className="mt-5 mb-3" src={Title2} style={{ width: 600 }} alt="" />
-      <div className="rowTime">
-        <div className="componentTime">
-          <div className="containerPleer">
-            <div className="playButton " onClick={usePrevTrackButton}>
-              <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-                <BiSkipPrevious />
-              </IconContext.Provider>
-            </div>
-            {!isPlaying ? (
-              <div className="playButton" onClick={playingButton}>
-                <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-                  <AiFillPlayCircle />
-                </IconContext.Provider>
-              </div>
-            ) : (
-              <div className="playButton" onClick={playingButton}>
-                <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-                  <AiFillPauseCircle />
-                </IconContext.Provider>
-              </div>
-            )}
-            <div className="playButton" onClick={useTrackButton}>
-              <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-                <BiSkipNext />
-              </IconContext.Provider>
-            </div>
-            <span>
-              {currTime.min}:{currTime.sec}
-            </span>
-            <input
-              type="range"
-              min="0"
-              max={duration / 1000}
-              default="0"
-              value={seconds}
-              className="timeline"
-              onChange={(e) => {
-                sound.seek([e.target.value]);
-              }}
-            />
-            <span>
-              {Math.floor(duration / 1000 / 60)} :{" "}
-              {Math.floor((duration / 1000) % 60)}
-            </span>
-          </div>
-        </div>
-      </div>
+
+
       <h1>Die Telefonnumer- номер телефона</h1>
       <p>
         Vorname-имя <br /> Familienname- фамилия
       </p>
+      <Player props={26} />
       <table className="table_a1">
         <tbody>
           <tr>
@@ -283,6 +184,7 @@ const Teil2 = () => {
         </tbody>
       </table>
       <h2>Ja\Nein-Fragen</h2>
+      <Player props={27} />
       <p>
         Ja/Nein-Fragen называются так, <br />
         потому что ответить на них можно одним словом ja, nein.
@@ -324,6 +226,7 @@ const Teil2 = () => {
       </p>
       <img className="mt-5" src={Horen} style={{ width: "100%" }} alt="" />
       <h2>Dialog 1</h2>
+      <Player props={28} />
       <div>
         <ul className="Dialog_1">
           <li>- Hallo, wie heißt du?</li>
@@ -338,6 +241,7 @@ const Teil2 = () => {
           <li>- Karin.</li>
         </ul>
         <h2>Dialog 2</h2>
+        <Player props={29} />
         <ul className="Dialog_1">
           <li>- Das ist Dana.</li>
           <li>- Hallo, Dana.</li>
@@ -351,6 +255,7 @@ const Teil2 = () => {
         </ul>
 
         <h2>Dialog 3</h2>
+        <Player props={30} />
         <ul className="Dialog_1">
           <li>
             - Und das sind Evdokia und Kyra. Sie kommen aus Griechenland aus
@@ -365,6 +270,7 @@ const Teil2 = () => {
           </li>
         </ul>
       </div>
+      <Player props={31} />
       <table className="table_a1">
         <tr>
           <th>Личное местоимение</th>
@@ -452,9 +358,13 @@ const Teil2 = () => {
       </ul>
       <img className="mt-5" src={Ergenzin} style={{ width: "500px" }} alt="" />
       {/* (здесь аудио 1.31) */}
-      <div className="row mt-5" >
-        <div className="col-lg-6 " style={{"display":"flex","justifyContent":"start"}}>
-          <p className="" style={{"textAlign":"start","fontSize":"25px"}}>
+      <Player props={32} />
+      <div className="row mt-5">
+        <div
+          className="col-lg-6 "
+          style={{ display: "flex", justifyContent: "start" }}
+        >
+          <p className="" style={{ textAlign: "start", fontSize: "25px" }}>
             а. Hören Sie das Telefongespräch. Nummerieren Sie die Fotos. <br />
             b. Hören Sie noch einmal. Wer sagt das? Ordnen Sie zu.
             <br />
@@ -472,14 +382,31 @@ const Teil2 = () => {
         </div>
         <div className="col-lg-6">
           <img className="mt-3" src={img2} style={{ width: "500px" }} alt="" />
+          <Player props={33} />
         </div>
       </div>
       <img className="mt-3" src={img3} style={{ width: "500px" }} alt="" />
+      <Player props={34} />
       <img className="mt-3" src={img4} style={{ width: "500px" }} alt="" />
+      <Player props={35} />
       <img className="mt-3" src={img5} style={{ width: "500px" }} alt="" />
+      <Player props={36} />
       <img className="mt-3" src={img6} style={{ width: "250px" }} alt="" />
+      <Player props={37} />
       <img className="mt-3" src={img7} style={{ width: "500px" }} alt="" />
-      {/* <img className="mt-3" src={img8} style={{ width: "500px" }} alt="" /> */}
+      <h3 className="mt-3">
+        Ergänzen Sie die Formen von haben und sein. Hören Sie zur Kontrolle.
+        
+      </h3>
+      <Player props={38} />
+      <ol className="mt-3 text-left" style={{ fontSize: "25px" }}>
+        <li>Hast du Skype?</li>
+        <li>Sie WhatsApp?</li>
+        <li>Wie … die E-Mail-Adresse von Ben?</li>
+        <li>Nesrin, … du bei Facebook?</li>
+      </ol>
+      <Player props={39} />
+      <img className="mt-3" src={img8} style={{ width: "500px" }} alt="" />
     </div>
   );
 };

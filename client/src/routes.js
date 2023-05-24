@@ -32,17 +32,17 @@ export const useRoutes = (isAuthenticated) => {
   const [admin, setAdmin] = useState(null);
   const data = JSON.parse(localStorage.getItem('user'));
   useEffect(() => {
-    if (data && data.userEmail === 'admin@gmail.com') {
+    if (data && data.userId === '64689a53239a224948afe3e6') {
       setAdmin(true)
     }
   }, [data]);
 
   if (!isAuthenticated) {
     return (<>
-      <Header props={admin} />
+      <Header props={data} />
       <Routes>
           {admin && (
-            <Route path="/AdminPanel" exact element={ <AdminPanel />}/>
+            <Route path="/admin"  element={ <AdminPanel />}/>
      
           )}
         <Route path="/" element={<HomePage />}/>

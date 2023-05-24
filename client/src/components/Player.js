@@ -31,6 +31,73 @@ import au24 from "../audeo/komen.m4a"
 import au25 from "../audeo/1-18.mp3"
 import au26 from "../audeo/numers.m4a"
 
+import au27 from "../audeo/salen30.mp3"
+import au28 from "../audeo/NeinFragen.mp3"
+import au29 from "../audeo/1-42.mp3"
+import au30 from "../audeo/1-43.mp3"
+import au31 from "../audeo/1-44.mp3"
+import au32 from "../audeo/lerne.mp3"
+
+import au33 from "../audeo/1-31.mp3"
+import au34 from "../audeo/1-32.mp3"
+import au35 from "../audeo/1-33.mp3"
+import au36 from "../audeo/1-34.mp3"
+import au37 from "../audeo/1-35.mp3"
+import au38 from "../audeo/1-38.mp3"
+import au39 from "../audeo/1-39.mp3"
+import au40 from "../audeo/1-40.mp3"
+
+import au41 from "../audeo/1-41.mp3"
+
+import au42 from "../audeo/1-45.mp3"
+
+import au43 from "../audeo/1-46.mp3"
+
+import au44 from "../audeo/1-59.mp3"
+
+import au45 from "../audeo/1-60.mp3"
+
+import au46 from "../audeo/1-61.mp3"
+
+import au47 from "../audeo/1-62.mp3"
+
+import au48 from "../audeo/1-68.mp3"
+
+import au49 from "../audeo/1-69.mp3"
+
+import au50 from "../audeo/1-70.mp3"
+
+import au51 from "../audeo/1-71.mp3"
+
+import au52 from "../audeo/1-73.mp3" 
+
+import au53 from "../audeo/1-74.mp3"
+
+import au54 from "../audeo/1-83.mp3"
+
+import au55 from "../audeo/1-84.mp3"
+
+import au56 from "../audeo/1-85.mp3"
+
+import au57 from "../audeo/1-87.mp3"
+
+import au58 from "../audeo/1-88.mp3"
+
+import au59 from "../audeo/1-89.mp3"
+
+import au60 from "../audeo/1-90.mp3"
+
+import au61 from "../audeo/1-91.mp3"
+
+import au62 from "../audeo/1-92.mp3"
+
+import au63 from "../audeo/1-93.mp3"
+
+import au64 from "../audeo/1-94.mp3"
+
+
+//skype.mp3
+
 const audioTracks = [
     au1 ,
     au2 ,
@@ -57,7 +124,48 @@ const audioTracks = [
     au23 ,
     au24 ,
     au25 ,
-    au26 ];
+    au26 ,
+
+    au27,
+    au28,
+    au29,
+    au30,
+    au31,
+    au32,
+    au33,
+    au34,
+    au35,
+    au36,
+    au37,
+    au38,
+    au39,
+    au40,
+    au41,
+    au42,
+    au43,
+    au44,
+    au45,
+    au46,
+    au47,
+    au48,
+    au49,
+    au50,
+    au51,
+    au52,
+    au53,
+    au54,
+    au55,
+    au56,
+    au57,
+    au58,
+    au59,
+    au60,
+    au61,
+    au62,
+    au63,
+    au64
+
+];
 export const Player = (props) => {
     // if (Math.trunc(props.props)<3&&Math.trunc(props.props)>=2) {
     //     let num = props.props
