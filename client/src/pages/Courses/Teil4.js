@@ -24,7 +24,7 @@ const Teil4 = () => {
     <>
       <div className="container text-center ">
         <img className="mt-5 mb-4" src={img1} style={{ width: 600 }} alt="" />
-        <ul
+        {/* <ul
           style={{
             textAlign: "start",
             textDecoration: "none",
@@ -44,7 +44,62 @@ const Teil4 = () => {
           <li>wir möchten-мы хотим </li>
           <li>ihr möchtet-вы хотите </li>
           <li>Sie/Sie möchten-они хотят/Вы хотите</li>
-        </ul>
+        </ul> */}
+        <table className="table_a1">
+  <thead>
+    <tr>
+      <th>Person</th>
+      <th>Verb arbeiten</th>
+      <th>Перевод</th>
+      <th>Verb möchten</th>
+      <th>Перевод</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ich</td>
+      <td>arbeite</td>
+      <td>я работаю</td>
+      <td>möchte</td>
+      <td>я хочу</td>
+    </tr>
+    <tr>
+      <td>Du</td>
+      <td>arbeitest</td>
+      <td>ты работаешь</td>
+      <td>möchtest</td>
+      <td>ты хочешь</td>
+    </tr>
+    <tr>
+      <td>Er/sie/es</td>
+      <td>arbeitet</td>
+      <td>он/она/оно работает</td>
+      <td>möchte</td>
+      <td>он/она/оно хочет</td>
+    </tr>
+    <tr>
+      <td>Wir</td>
+      <td>arbeiten</td>
+      <td>мы работаем</td>
+      <td>möchten</td>
+      <td>мы хотим</td>
+    </tr>
+    <tr>
+      <td>Ihr</td>
+      <td>arbeitet</td>
+      <td>вы работаете</td>
+      <td>möchtet</td>
+      <td>вы хотите</td>
+    </tr>
+    <tr>
+      <td>Sie/Sie</td>
+      <td>arbeiten</td>
+      <td>они работают</td>
+      <td>möchten</td>
+      <td>они хотят / Вы хотите</td>
+    </tr>
+  </tbody>
+</table>
         <div className="row">
           <div className="col-6">
             <ul className="Dialog_1 mt-4">
@@ -263,7 +318,7 @@ const Teil4 = () => {
         <img className="mt-5" src={img16} style={{ width: 600 }} alt="" />
         <img className="mt-5" src={img17} style={{ width: 600 }} alt="" />
 
-        <ul
+        {/* <ul
           style={{
             textAlign: "start",
             textDecoration: "none",
@@ -282,7 +337,73 @@ const Teil4 = () => {
           <li>Schön - красивый</li>
           <li>Kaputt - сломанный</li>
           <li>Der Schlüssel - ключ</li>
-        </ul>
+        </ul> */}
+        <table className="table_a1">
+  <thead>
+    <tr>
+      <th>Wort</th>
+      <th>Übersetzung</th>
+      <th>Rod</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Die Freunde</td>
+      <td>друзья</td>
+      <td>(p) мн.</td>
+    </tr>
+    <tr>
+      <td>Die Fotos</td>
+      <td>фотографии</td>
+      <td>(p) мн.</td>
+    </tr>
+    <tr>
+      <td>Brauchen</td>
+      <td>нуждаться</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Lecker</td>
+      <td>вкусный</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Alt</td>
+      <td>старый</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Nett</td>
+      <td>милый</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Neu</td>
+      <td>новый</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Toll</td>
+      <td>клевый</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Schön</td>
+      <td>красивый</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Kaputt</td>
+      <td>сломанный</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Der Schlüssel</td>
+      <td>ключ</td>
+      <td>(m) муж.</td>
+    </tr>
+  </tbody>
+</table>
         <img className="mt-5" src={img18} style={{ width: 800 }} alt="" />
       </div>
     </>

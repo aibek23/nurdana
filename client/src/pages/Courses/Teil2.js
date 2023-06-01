@@ -23,11 +23,9 @@ import Title2 from "../../img/tile2.png";
 const audioTracks = [];
 const defaultTrackIndex = 0;
 const Teil2 = () => {
-
   return (
     <div className="container text-center ">
       <img className="mt-5 mb-3" src={Title2} style={{ width: 600 }} alt="" />
-
 
       <h1>Die Telefonnumer- номер телефона</h1>
       <p>
@@ -391,12 +389,29 @@ const Teil2 = () => {
       <Player props={35} />
       <img className="mt-3" src={img5} style={{ width: "500px" }} alt="" />
       <Player props={36} />
-      <img className="mt-3" src={img6} style={{ width: "250px" }} alt="" />
+
+      <h3 className="mt-3">
+        Hören Sie die Dialoge. Beantworten Sie die Fragen: ja oder nein? Kreuzen
+        Sie an.
+      </h3>
+      <div className="row">
+        <div className="col-lg-6">
+          <ol className="mt-3 text-left" style={{ fontSize: "25px" }}>
+            <li> Hat Ben WhatsApp?</li>
+            <li> Ist Pablo bei Facebook?</li>
+            <li> Hat Dana Skype? </li>
+            <li> Hat Nesrin eine E-Mail-Adresse?</li>
+            <li> Ist Nesrin bei Facebook?</li>
+          </ol>
+        </div>
+        <div className="col-lg-6">
+          <img className="mt-3" src={img6} style={{ width: "250px" }} alt="" />
+        </div>
+      </div>
       <Player props={37} />
       <img className="mt-3" src={img7} style={{ width: "500px" }} alt="" />
       <h3 className="mt-3">
         Ergänzen Sie die Formen von haben und sein. Hören Sie zur Kontrolle.
-        
       </h3>
       <Player props={38} />
       <ol className="mt-3 text-left" style={{ fontSize: "25px" }}>

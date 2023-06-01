@@ -28,50 +28,194 @@ const Teil3 = () => {
       <img className="mt-5" src={Student} style={{ maxWidth: "70vw" }} alt="" />
      
       {/* <h1>Немецкие фразы </h1> */}
-      <div className="row">
-        <div className="col-6">
-          {" "}
-          <ul className="Dialog_1 mt-4">
-            <li>das Fenster-окно</li>
-            <li>der Tisch-стол</li>
-            <li>das Poster-постер</li>
-            <li>die Tafel-доска</li>
-            <li>der Stuhl –стул</li>
-            <li>die Tasche-сумка</li>
-            <li>die Lampe-лампа</li>
-            <li>der Laptoр-ноутбук</li>
-            <li>das Tablet-планшет</li>
-            <li>die Brille-очки</li>
-            <li>der Kuli-ручка</li>
-          </ul>
-        </div>
-        <div className="col-6">
-          <ul className="Dialog_1 mt-4">
-            <li>das Buch-книга</li>
-            <li>Der Bleistift - карандаш (m)</li>
-            <li>Der Radiergummi-стирательная резинка(m)</li>
-            <li>Der Spitzer - точилка (m)</li>
-            <li>Das Heft - тетрадь (n)</li>
-            <li>Das Handy - телефон (n)</li>
-            <li>Das Deutschbuch - книга на немецком (n)</li>
-            <li>Das Wörterbuch - словарь (n)</li>
-            <li>Die Maus - мышь (f)</li>
-            <li>Die Schere - ножницы (f)</li>
-          </ul>
-        </div>
-      </div>
+      <table className="table_a1">
+  <thead>
+    <tr>
+      <th>Artikel</th>
+      <th>Singular</th>
+      <th>Plural</th>
+      <th>Übersetzung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>das (n)</td>
+      <td>Fenster</td>
+      <td>-</td>
+      <td>окно</td>
+    </tr>
+    <tr>
+      <td>der (m)</td>
+      <td>Tisch</td>
+      <td>Tische</td>
+      <td>стол</td>
+    </tr>
+    <tr>
+      <td>das (n)</td>
+      <td>Poster</td>
+      <td>-</td>
+      <td>постер</td>
+    </tr>
+    <tr>
+      <td>die (f)</td>
+      <td>Tafel</td>
+      <td>Tafeln</td>
+      <td>доска</td>
+    </tr>
+    <tr>
+      <td>der (m)</td>
+      <td>Stuhl</td>
+      <td>Stühle</td>
+      <td>стул</td>
+    </tr>
+    <tr>
+      <td>die (f)</td>
+      <td>Tasche</td>
+      <td>Taschen</td>
+      <td>сумка</td>
+    </tr>
+    <tr>
+      <td>die (f)</td>
+      <td>Lampe</td>
+      <td>Lampen</td>
+      <td>лампа</td>
+    </tr>
+    <tr>
+      <td>der (m)</td>
+      <td>Laptop</td>
+      <td>Laptops</td>
+      <td>ноутбук</td>
+    </tr>
+    <tr>
+      <td>das (n)</td>
+      <td>Tablet</td>
+      <td>-</td>
+      <td>планшет</td>
+    </tr>
+    <tr>
+      <td>die (f)</td>
+      <td>Brille</td>
+      <td>Brillen</td>
+      <td>очки</td>
+    </tr>
+    <tr>
+      <td>der (m)</td>
+      <td>Kuli</td>
+      <td>Kulis</td>
+      <td>ручка</td>
+    </tr>
+    <tr>
+      <td>das (n)</td>
+      <td>Buch</td>
+      <td>-</td>
+      <td>книга</td>
+    </tr>
+    <tr>
+      <td>der (m)</td>
+      <td>Bleistift</td>
+      <td>Bleistifte</td>
+      <td>карандаш</td>
+    </tr>
+    <tr>
+      <td>der (m)</td>
+      <td>Radiergummi</td>
+      <td>Radiergummis</td>
+      <td>стирательная резинка</td>
+    </tr>
+    <tr>
+      <td>der (m)</td>
+      <td>Spitzer</td>
+      <td>Spitzer</td>
+      <td>точилка</td>
+    </tr>
+    <tr>
+      <td>das (n)</td>
+      <td>Heft</td>
+      <td>-</td>
+      <td>тетрадь</td>
+    </tr>
+    <tr>
+      <td>das (n)</td>
+      <td>Handy</td>
+      <td>-</td>
+      <td>телефон</td>
+    </tr>
+    <tr>
+      <td>das (n)</td>
+      <td>Deutschbuch</td>
+      <td>-</td>
+      <td>книга на немецком</td>
+    </tr>
+    <tr>
+      <td>das (n)</td>
+      <td>Wörterbuch</td>
+      <td>-</td>
+      <td>словарь</td>
+    </tr>
+    <tr>
+      <td>die (f)</td>
+      <td>Maus</td>
+      <td>Mäuse</td>
+      <td>мышь</td>
+    </tr>
+    <tr>
+      <td>die (f)</td>
+      <td>Schere</td>
+      <td>Scheren</td>
+      <td>ножницы</td>
+    </tr>
+  </tbody>
+</table>
+      <table className="table_a1">
+        <thead>
+          <tr>
+          <th>Pronomen</th>
+          <th>Possessiv Pronomen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ich</td>
+            <td>mein</td>
+          </tr>
+          <tr>
+            <td>du</td>
+            <td>dein</td>
+          </tr>
+          <tr>
+            <td>er</td>
+            <td>sein</td>
+          </tr>
+          <tr>
+            <td>sie</td>
+            <td>ihr</td>
+          </tr>
+          <tr>
+            <td>es</td>
+            <td>sein</td> 
+          </tr>
+          <tr>
+            <td>wir</td>
+            <td>unser</td>
+          </tr>
+          <tr>
+            <td>ihr</td>
+            <td>euer</td>
+          </tr>
+          <tr>
+            <td>Sie</td>
+            <td>Ihr</td>
+          </tr>
+          <tr>
+            <td>sie</td>
+            <td>ihr</td>
+          </tr>
 
-      <ul className="Dialog_1 mt-4">
-        <li>ich - mein</li>
-        <li>du - dein</li>
-        <li>er - sein</li>
-        <li>sie - ihr</li>
-        <li>es - sein</li>
-        <li>wir - unser</li>
-        <li>ihr - euer</li>
-        <li>Sie - Ihr</li>
-        <li>sie - ihr</li>
-      </ul>
+        </tbody>
+      </table>
+
+
+
       <table className="table_a1">
         <thead>
           <tr>
@@ -196,8 +340,8 @@ const Teil3 = () => {
           <div className="card-body">
             <p className="card-text">Ein Schirm - Один какой-то зонт</p>
             <p className="card-text">Mein Schirm - Мой зонт</p>
-            <p className="card-text">Mein Schirm - Мой зонт</p>
-            <p className="card-text">Mein Schirm - Мой зонт</p>
+            <p className="card-text">Dein Schirm - Твой зонт </p>
+            <p className="card-text">Der Schirm von Tom - Этот зонт Тома</p>
           </div>
         </div>
 
@@ -220,7 +364,7 @@ const Teil3 = () => {
           <img
             className="card-img-top mt-5"
             src={img6}
-            style={{ width: 250 }}
+            style={{ width: 275 }}
             alt=""
           />
           <div className="card-body">
