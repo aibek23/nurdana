@@ -84,13 +84,13 @@ const Teil1 = () => {
       <Player props={16} />
       <div className="dialogue" style={{ textAlign: "start" }}>
         <h3>Schreiben Sie den Dialog. Hören Sie zur Kontrolle.</h3>
-        <p>Ich komme aus Chicago, USA.</p>
-        <p>Hallo, ich bin Ben. Und wer bist du?</p>
-        <p>In München.</p>
-        <p>O Ich heiße Eleni. Ich komme aus Deva.</p>
+        <p>Ich heiße Eleni. Ich komme aus Deva.</p>
         <p>Das ist in Rumänien. Woher kommst du?</p>
-        <p>O Und wo wohnst du jetzt?</p>
-        <p>(Hallo, ich bin Ben …)</p>
+        <p>Ich komme aus Chicago, USA.</p>
+        <p>Und wo wohnst du jetzt?</p>
+        <p>In München.</p>
+
+
       </div>
       <h1>Немецкие фразы приветствия и прощания</h1>
       <table className="table_a1">

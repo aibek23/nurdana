@@ -311,12 +311,13 @@ const Teil2 = () => {
         <li>Pl(Plural)-множественное число</li>
       </ul>
       <h2>5. Ein Steckbrief - Ergänzen Sie den Text.</h2>
+      
       <ul className="Dialog_1">
-        <li>spreche , ist , sind , komme , lernen , bin , lerne </li>
-        <li>
+        <li>spreche ,<s>ist</s> , sind , komme , lernen , bin , lerne </li>
+        <li style={{"textAlign":"start"}}>
           Mein name ist Tian Xu. Ich….....aus China. Ich……….Chinese
           und…………Chinesich und ein bisschen Deutsch. Jetzt…………… ich Deutsch.
-          Dana und Polo………meine Freunde. Sie……………auch Deutsch.{" "}
+          Dana und Polo………meine Freunde. Sie……………auch Deutsch.
         </li>
       </ul>
       <h2>6. Pablo schreibt ein Nachricht </h2>
@@ -346,12 +347,11 @@ const Teil2 = () => {
       <img className="mt-5" src={Antvorten} style={{ width: "100%" }} alt="" />
       <ul className="Dialog_1">
         <li>b. Ergänzen Sie den Text mit den Informationen aus Aufgabe</li>
-        <li>
-          {" "}
+        <li style={{"textAlign":"start"}}>
           8. Nesrin arbeitet in der……………..Meyer & Sohn. Dort sind acht………… Sie
           kommen aus Deutschland, aus der………………..und aus Litauen. Die Freundin
           von Nesrin heißt………………………Sie arbeitet als……..... Jochen arbeitet im
-          Büro. Er ist der…………….
+          Büro. Er ist der…………… .
         </li>
       </ul>
       <img className="mt-5" src={Ergenzin} style={{ width: "500px" }} alt="" />

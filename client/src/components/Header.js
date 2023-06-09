@@ -8,12 +8,13 @@ export const Header = (props) => {
   const data = JSON.parse(localStorage.getItem('user'));
   const auth = useContext(Context)
   const logoutHandler = () => {
-    auth.logout()
+    auth.logout();
+    window.location.reload();
   }
   useEffect(() => {
     setState(prevState => {
       const newState = { ...prevState };
-      if (isAuthenticated !== null) {
+      if (isAuthenticated) {
         newState.authenticated = true;
 
       }

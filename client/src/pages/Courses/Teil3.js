@@ -41,127 +41,127 @@ const Teil3 = () => {
     <tr>
       <td>das (n)</td>
       <td>Fenster</td>
-      <td>-</td>
+      <td>die Fenster</td>
       <td>окно</td>
     </tr>
     <tr>
       <td>der (m)</td>
       <td>Tisch</td>
-      <td>Tische</td>
+      <td>die Tische</td>
       <td>стол</td>
     </tr>
     <tr>
       <td>das (n)</td>
       <td>Poster</td>
-      <td>-</td>
+      <td>die Poster</td>
       <td>постер</td>
     </tr>
     <tr>
       <td>die (f)</td>
       <td>Tafel</td>
-      <td>Tafeln</td>
+      <td>die Tafeln</td>
       <td>доска</td>
     </tr>
     <tr>
       <td>der (m)</td>
       <td>Stuhl</td>
-      <td>Stühle</td>
+      <td>die Stühle</td>
       <td>стул</td>
     </tr>
     <tr>
       <td>die (f)</td>
       <td>Tasche</td>
-      <td>Taschen</td>
+      <td>die Taschen</td>
       <td>сумка</td>
     </tr>
     <tr>
       <td>die (f)</td>
       <td>Lampe</td>
-      <td>Lampen</td>
+      <td>die Lampen</td>
       <td>лампа</td>
     </tr>
     <tr>
       <td>der (m)</td>
       <td>Laptop</td>
-      <td>Laptops</td>
+      <td>die Laptops</td>
       <td>ноутбук</td>
     </tr>
     <tr>
       <td>das (n)</td>
       <td>Tablet</td>
-      <td>-</td>
+      <td>die Tablet</td>
       <td>планшет</td>
     </tr>
     <tr>
       <td>die (f)</td>
       <td>Brille</td>
-      <td>Brillen</td>
+      <td>die Brillen</td>
       <td>очки</td>
     </tr>
     <tr>
       <td>der (m)</td>
       <td>Kuli</td>
-      <td>Kulis</td>
+      <td>die Kulis</td>
       <td>ручка</td>
     </tr>
     <tr>
       <td>das (n)</td>
       <td>Buch</td>
-      <td>-</td>
+      <td>die Buch</td>
       <td>книга</td>
     </tr>
     <tr>
       <td>der (m)</td>
       <td>Bleistift</td>
-      <td>Bleistifte</td>
+      <td>die Bleistifte</td>
       <td>карандаш</td>
     </tr>
     <tr>
       <td>der (m)</td>
       <td>Radiergummi</td>
-      <td>Radiergummis</td>
+      <td>die Radiergummis</td>
       <td>стирательная резинка</td>
     </tr>
     <tr>
       <td>der (m)</td>
       <td>Spitzer</td>
-      <td>Spitzer</td>
+      <td>die Spitzer</td>
       <td>точилка</td>
     </tr>
     <tr>
       <td>das (n)</td>
       <td>Heft</td>
-      <td>-</td>
+      <td>die Heft</td>
       <td>тетрадь</td>
     </tr>
     <tr>
       <td>das (n)</td>
       <td>Handy</td>
-      <td>-</td>
+      <td>die Handy</td>
       <td>телефон</td>
     </tr>
     <tr>
       <td>das (n)</td>
       <td>Deutschbuch</td>
-      <td>-</td>
+      <td>die Deutschbuch</td>
       <td>книга на немецком</td>
     </tr>
     <tr>
       <td>das (n)</td>
       <td>Wörterbuch</td>
-      <td>-</td>
+      <td>die Wörterbuch</td>
       <td>словарь</td>
     </tr>
     <tr>
       <td>die (f)</td>
       <td>Maus</td>
-      <td>Mäuse</td>
+      <td>die Mäuse</td>
       <td>мышь</td>
     </tr>
     <tr>
       <td>die (f)</td>
       <td>Schere</td>
-      <td>Scheren</td>
+      <td>die Scheren</td>
       <td>ножницы</td>
     </tr>
   </tbody>
