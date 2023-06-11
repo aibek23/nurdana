@@ -279,7 +279,7 @@ const Teil3 = () => {
             <tr>
               <td>Ich sehe eine Katze</td>
               <td>Ich sehe keine Katze</td>
-              <td>Я вижу собаку / Я не вижу никакую собаку</td>
+              <td>Я вижу кошку / Я не вижу никакую кошку</td>
             </tr>
           </tbody>
         </table>

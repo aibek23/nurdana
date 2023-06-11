@@ -415,10 +415,11 @@ const Teil2 = () => {
       </h3>
       <Player props={38} />
       <ol className="mt-3 text-left" style={{ fontSize: "25px" }}>
-        <li>Hast du Skype?</li>
-        <li>Sie WhatsApp?</li>
-        <li>Wie … die E-Mail-Adresse von Ben?</li>
-        <li>Nesrin, … du bei Facebook?</li>
+        <li>1. Hast du Skype?</li>
+        <li>2. ... Sie WhatsApp?</li>
+        <li>3. ... Sie bei Facebook?</li>
+        <li>4. Wie … die E-Mail-Adresse von Ben?</li>
+        <li>5. Nesrin, … du bei Facebook?</li>
       </ol>
       <Player props={39} />
       <img className="mt-3" src={img8} style={{ width: "500px" }} alt="" />

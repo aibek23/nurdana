@@ -35,6 +35,7 @@ export const Header = (props) => {
               {state.adm ?<NavLink className="nav-link" to={"/admin"}>admin</NavLink>:""}
               <NavLink className="nav-link" to={"/"}>Главная</NavLink>
               {state.authenticated ? <NavLink className="nav-link" to={"/Media"}>Медиатека</NavLink> : ""}
+              {state.authenticated ? <NavLink className="nav-link" to={"/tests"}>Тесты</NavLink> : ""}
               <NavLink className="nav-link" to={"/grammar"}>Грамматика</NavLink>
               {!state.authenticated ? <NavLink className="nav-link" to={"/AuthPage"}>Вход</NavLink> : <NavLink className="nav-link" to={"/AuthPage"} onClick={(e) => logoutHandler(e)}>Выйти</NavLink>}
             </Nav>

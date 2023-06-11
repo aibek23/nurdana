@@ -15,6 +15,13 @@ import Teil2 from './pages/Courses/Teil2'
 import Teil3 from './pages/Courses/Teil3'
 import Teil4 from './pages/Courses/Teil4'
 
+import Tests from './pages/Tests/Tests'
+import Lecktion1 from './pages/Tests/Lecktion1'
+import Lecktion2 from './pages/Tests/Lecktion2'
+import Lecktion3 from './pages/Tests/Lecktion3'
+import Lecktion4 from './pages/Tests/Lecktion4'
+// import Lecktion1 from './pages/Tests/Lecktion1'
+
 import Media from './pages/Media'
 
 import GrammarPage from './pages/GrammarPage'
@@ -53,8 +60,15 @@ export const useRoutes = (isAuthenticated) => {
         <Route path="/teil2" exact   element={<Teil2 />} />
         <Route path="/teil3" exact   element={<Teil3 />} />
         <Route path="/teil4" exact   element={<Teil4 />} />
+
+        <Route path="/tests" element={<Tests/>} />
+        <Route path="/test/lecktion1" element={<Lecktion1/>} />
+        <Route path="/test/lecktion2" element={<Lecktion2/>} />
+        <Route path="/test/lecktion3" element={<Lecktion3/>} />
+        <Route path="/test/lecktion4" element={<Lecktion4/>} />
+
         <Route path='/Media' exact element={<Media />} />
-        
+          
         <Route path="/grammar" exact   element={<GrammarPage />} />
         <Route path="/grammar/phonetics" exact   element={<Alphabet />} />
         <Route path="/grammar/nouns" exact   element={<Nouns />} />
