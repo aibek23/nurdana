@@ -373,6 +373,7 @@ const Lecktion1 = () => {
               <li>Nicht</li>
               <li>Wohne</li>
               <li>Kaputt</li>
+              <li>Deutsch</li>
             </ul>
             <label className="d-flex font-weight-bold">
               5)
