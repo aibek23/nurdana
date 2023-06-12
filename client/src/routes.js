@@ -98,6 +98,7 @@ export const useRoutes = (isAuthenticated) => {
         <Route path="/teil2" exact   element={<Teil2 />} />
         <Route path="/teil3" exact   element={<Teil3 />} />
         <Route path="/teil4" exact   element={<Teil4 />} />
+        <Route path='/Media' exact element={<Media />} />
         <Route path="/grammar" exact   element={<GrammarPage />} />
         <Route path="/grammar/phonetics" exact   element={<Alphabet />} />
         <Route path="/grammar/nouns" exact   element={<Nouns />} />
